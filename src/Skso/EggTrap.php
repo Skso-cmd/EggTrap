@@ -122,9 +122,9 @@ class EggTrap extends PluginBase implements Listener
         $this->getScheduler()->scheduleDelayedTask(new class($playerName, $duration, $this) extends Task {
             private string $playerName;
             private int $remainingTime;
-            private TrapEggPlugin $plugin;
+            private EggTrap $plugin;
 
-            public function __construct(string $playerName, int $duration, TrapEggPlugin $plugin)
+            public function __construct(string $playerName, int $duration, EggTrap $plugin)
             {
                 $this->playerName = $playerName;
                 $this->remainingTime = $duration;
